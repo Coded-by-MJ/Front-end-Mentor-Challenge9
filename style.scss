@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+//gradients
+$bg1: hsl(252, 100%, 67%);
+$bg2: hsl(241, 81%, 54%);
+
+$circle1: hsla(256, 72%, 46%, 1);
+$circle2: hsla(241, 72%, 46%, 0);
+
+//colors
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lave: hsl(241, 100%, 89%);
+$d-gray-blue: hsl(224, 30%, 27%);
+
+$item1: #F55;
+$item2: #FFB21E;
+$item3: #00BB8F;
+$item4: #1125D6;
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-size: 18px;
+    font-weight: 500;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    font-family: "Hanken Grotesk", sans-serif;
+
+}
+
+
+
+section{
+     
+    .wrapper-one{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.1rem;
+        padding: 20px 23px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background: linear-gradient(
+            180deg,
+            $bg1,
+            $bg2
+        );
+
+      
+        h2{
+            font-size: clamp(1rem, 5vw, 1.8rem);
+            font-weight: 700;
+            color: $Light-lave;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+        }
+
+        .score-total{
+            width: 160px;
+            height: 160px;
+            max-width: 220px;
+            max-height: 220px;
+            display: flex;
+            color: $White;
+            font-size: clamp(2.9rem,  7vw, 5rem);
+            font-weight: 800;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(
+                  180deg,
+                 $circle1,
+                 $circle2,
+           
+            );
+
+            span{
+                display: inline-block;
+                font-size: clamp(1rem, 3vw, 1.5rem);
+                font-weight: 700;
+                color: rgba($Light-lave, 60%);
+                
+            }
+        }
+
+    .info{
+        span{
+            color: $White;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            font-size: clamp(1.1rem, 5vw, 1.8rem);
+        }
+
+        p{
+           font-size: clamp(1rem, 5vw, 1.5rem);
+           color: $Light-lave;
+           text-align: center;
+           line-height: 1.5;
+           text-wrap: wrap;
+           margin: 0;
+        }
+    }
+
+  }
+
+
+
+
+
+.wrapper-two{
+    padding: 20px 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $White;
+
+    & > *{
+        width: 100%;
+    }
+
+       h2{
+          text-align: left;
+          color: $d-gray-blue;
+          font-weight: 800;
+          margin: 0;
+          font-size: clamp(1rem, 5vw, 1.8rem);
+       }
+
+
+       button{
+        text-align: center;
+        vertical-align: middle;
+        padding-block: 12px;
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        border: none;
+        border-radius: 25px;
+        color: $White;
+        background: $d-gray-blue;
+        font-weight: 700;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            background: linear-gradient(
+            180deg,
+            $bg1,
+            $bg2
+        );
+        }
+
+    }
+  }
+
+
+}
+
+
+.summary-board{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+
+    .item{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 7px;
+        padding: 12px;
+
+        h3{
+            font-weight: 700;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+
+        .sm-score{
+            color: $d-gray-blue;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            font-weight: 700;
+
+
+            span{
+                font-size: clamp(0.9rem, 2vw, 1.3rem);
+                font-weight: 700;
+                color: rgba($d-gray-blue, 50%)
+            }
+            
+        }
+
+
+        &:nth-child(1){
+            background: rgba($item1, 5%);
+
+            h3{
+                color: $item1;
+            }
+        }
+
+        &:nth-child(2){
+            background: rgba($item2, 5%);
+
+            h3{
+                color: $item2;
+            }
+        }
+        &:nth-child(3){
+            background: rgba($item3, 5%);
+
+            h3{
+                color: $item3;
+            }
+        }
+        &:nth-child(4){
+            background: rgba($item4, 5%);
+
+            h3{
+                color: $item4;
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+@media screen and (min-width: 992px){
+    body{
+        display: grid;
+        place-items: center;
+    }
+
+
+    section{
+       padding-inline: 50px;
+
+
+
+       .wrapper-one{
+          border-radius: 30px;
+          padding: 30px 60px;
+          justify-content: space-between;
+          gap: 25px;
+          height: 600px;
+          transform: translateX(40px);
+
+
+          .score-total{
+              width: 215px;
+              height: 215px;
+
+          }
+       }
+
+       .wrapper-two{
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 30px 40px;
+        padding-left: 80px;
+        box-shadow: 0 0 6px 0 rgba($d-gray-blue, 20%);
+        justify-content: space-between;
+        gap: 25px;
+        height: 600px;
+              
+
+        button{
+            padding-block: 18px;
+            border-radius: 35px;
+         }
+
+       }
+
+
+     
+    }
+}
+
+
+
+
+
+
+
+.summary-board{
+    margin: 0;
+}
