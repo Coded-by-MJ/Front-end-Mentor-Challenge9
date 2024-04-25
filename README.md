@@ -29,3 +29,9 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 - SCSS
 - Javascript
 - Mobile First Workflow
+
+
+
+
+- Frontend Mentor - [@Coded-by-MJ](https://www.frontendmentor.io/profile/Coded-by-MJ)
+- Twitter - [@MiracleJustice_](https://twitter.com/MiracleJustice_)
